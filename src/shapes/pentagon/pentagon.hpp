@@ -1,11 +1,11 @@
-#ifndef TRIANGLE_HPP
-#define TRIANGLE_HPP
+#ifndef PENTAGON_HPP
+#define PENTAGON_HPP
 
 #include "shapes/shape.hpp"
 
-class Triangle : public Shape {
+class Pentagon : public Shape {
 public:
-    Triangle(double side);
+    Pentagon(double side);
     double area();
     double perimeter();
 private:
