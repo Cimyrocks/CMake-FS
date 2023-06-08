@@ -14,14 +14,12 @@ jobs:
         check-path: 'meta-das-core'
         fallback-style: 'Google'
 
-  # check-cppcheck:
-  #   name: Cppcheck
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Setup Cppcheck
-  #     run: |
-  #       sudo apt install cppcheck
-  #     - name: Running Cppcheck
-  #     run: |
-  #       find . -regex '.*\.\(cpp\|hpp\|c\|h\)' | xargs cppcheck
+  check-cppcheck:
+    name: Cppcheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Cppcheck
+      run: sudo apt install cppcheck
+    - name: Running Cppcheck
+      run: find . -regex '.*\.\(cpp\|hpp\|c\|h\)' | xargs cppcheck
