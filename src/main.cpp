@@ -6,7 +6,7 @@ const char *PASSWORD_FILE = "rictro";
 
 int main()
 {
-  char input[8];
+  char input[8]
   char password[8];
 
   std::sscanf(PASSWORD_FILE, "%s", password);
